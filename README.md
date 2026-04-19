@@ -20,10 +20,15 @@ E-Commerce Use Cases und bildet eine solide Grundlage für Reporting und Dashboa
 🎯 Projektziele
 
 ✨ Aufbau einer relationalen Datenbank
+
 🧹 Datenbereinigung und Standardisierung
+
 🔗 Verknüpfung der Tabellen mit Fremdschlüsseln
+
 📊 Erstellung von Analyse-Views
+
 📈 Entwicklung von Business-KPIs
+
 🌍 Verbesserung der Lesbarkeit durch deutsche Kategorien
 
 🧱 Datenmodell
@@ -31,12 +36,19 @@ E-Commerce Use Cases und bildet eine solide Grundlage für Reporting und Dashboa
 Die Datenbank umfasst folgende Kernbereiche:
 
 👥 Customers – Kundendaten
+
 📦 Orders – Bestellungen
+
 🛍️ Order Items – einzelne Produkte pro Bestellung
+
 💳 Payments – Zahlungsinformationen
+
 ⭐ Reviews – Kundenbewertungen
+
 🏪 Sellers – Verkäufer
+
 📦 Products – Produktdaten
+
 🌐 Category Translation – Übersetzungen (EN + DE)
 
 👉 Die geolocation-Tabelle wurde bewusst entfernt, um das Modell schlank und fokussiert zu halten.
@@ -44,9 +56,13 @@ Die Datenbank umfasst folgende Kernbereiche:
 ⚙️ Technologien
 
 🐘 PostgreSQL
+
 💻 SQL
+
 📂 CSV-Import (COPY)
+
 📊 Views & Window Functions
+
 🚀 Performance-Optimierung (Indizes)
 
 olist-postgresql-project/
@@ -68,39 +84,61 @@ olist-postgresql-project/
 Folgende Schritte wurden durchgeführt:
 
 ✔ Entfernen von Duplikaten
+
 ✔ Standardisierung von Textfeldern
+
 ✔ Bereinigung von Kategorienamen
+
 ✔ Prüfung auf fehlende Verknüpfungen
+
 ✔ Plausibilitätsprüfung von Zeitdaten
 
+
 📊 Beispielanalysen
+
 
 Das Projekt enthält verschiedene praxisnahe SQL-Analysen:
 
 📍 Top-Städte nach Bestellungen
+
 💰 Gesamtumsatz
+
 📅 Bestellungen pro Monat
+
 ⭐ Durchschnittliche Bewertungen
+
 🚚 Lieferzeiten
+
 🛒 Warenkorbwert
+
 💳 Umsatz nach Zahlungsart
+
 🏆 Top-Seller
+
 🔁 Wiederkäufer-Analyse
+
 💎 Customer Lifetime Value (CLV)
 
 🔥 Highlight-Insights
+
 Umsatzentwicklung über Zeit analysierbar
 Kundenverhalten klar segmentiert
 Schwache Produktkategorien identifiziert
 Verkäuferleistung vergleichbar gemacht
+
 💡 Besonderheiten
 
 🌍 Deutsche Übersetzungen für bessere Lesbarkeit
+
 🧠 Zentrale Analyse-View (v_bestellungen)
+
 ⚡ Optimierte Performance durch Indizes
+
 📊 Struktur bereit für BI-Tools (Power BI / Tableau)
 
+
 🚀 Einsatzmöglichkeiten
+
 
 Dieses Projekt eignet sich für:
 
@@ -108,6 +146,7 @@ Data Analytics Portfolio
 SQL Showcase
 Business Intelligence Use Cases
 Vorbereitung auf Data Analyst Jobs
+
 📎 Datenquelle
 
 Olist Brazilian E-Commerce Dataset (öffentlich verfügbar)
