@@ -4,7 +4,7 @@
 
 🛒 Olist E-Commerce Data Analysis
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
 ![SQL](https://img.shields.io/badge/SQL-Analysis-orange)
@@ -27,7 +27,8 @@ E-Commerce Use Cases und bildet eine solide Grundlage für Reporting und Dashboa
 
 🎯 Projektziele
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
 
 ✨ Aufbau einer relationalen Datenbank
 
@@ -45,9 +46,11 @@ E-Commerce Use Cases und bildet eine solide Grundlage für Reporting und Dashboa
 
 🧱 Datenmodell
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
 Die Datenbank umfasst folgende Kernbereiche:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
 
 👥 Customers – Kundendaten
 
@@ -79,7 +82,8 @@ Die Datenbank umfasst folgende Kernbereiche:
 
 🚀 Performance-Optimierung (Indizes)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
 
 olist-postgresql-project/
 │
@@ -95,11 +99,12 @@ olist-postgresql-project/
 │   ├── 07_views.sql
 │   ├── 08_analysis.sql
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 
 🧹 Datenbereinigung
-━━━━━━━━━━━━━━━━━━━━
+
+
 
 Folgende Schritte wurden durchgeführt:
 
@@ -113,15 +118,15 @@ Folgende Schritte wurden durchgeführt:
 
 ✔ Plausibilitätsprüfung von Zeitdaten
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 
 📊 Beispielanalysen
-━━━━━━━━━━━━━━━━━━━━
+
 
 
 Das Projekt enthält verschiedene praxisnahe SQL-Analysen:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 
 📍 Top-Städte nach Bestellungen
@@ -146,14 +151,14 @@ Das Projekt enthält verschiedene praxisnahe SQL-Analysen:
 
 🔥 Highlight-Insights
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 Umsatzentwicklung über Zeit analysierbar
 Kundenverhalten klar segmentiert
 Schwache Produktkategorien identifiziert
 Verkäuferleistung vergleichbar gemacht
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 💡 Besonderheiten
 
@@ -165,39 +170,39 @@ Verkäuferleistung vergleichbar gemacht
 
 📊 Struktur bereit für BI-Tools (Power BI / Tableau)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 
 🚀 Einsatzmöglichkeiten
-━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 Dieses Projekt eignet sich für:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 Data Analytics Portfolio
 SQL Showcase
 Business Intelligence Use Cases
 Vorbereitung auf Data Analyst Jobs
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 📎 Datenquelle
-━━━━━━━━━━━━━━━
+
 
 Olist Brazilian E-Commerce Dataset (öffentlich verfügbar)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 ✨ Fazit
-━━━━━━━━━━━
+
 
 Dieses Projekt zeigt, wie aus unstrukturierten Rohdaten eine saubere, analysierbare Datenbank entsteht.
 Durch strukturierte Modellierung, Datenbereinigung und gezielte Analysen lassen sich wertvolle Business-Insights gewinnen.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 👩‍💻 Autorin
-━━━━━━━━━━━
+
 
 Lili Kárándi
 
