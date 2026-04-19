@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./header.png" alt="Olist E-Commerce Banner" width="100%" />
+  <img src="./header.png" alt="Olist E-Commerce Banner" width="50%" />
 </p>
 
 <p align="center">
