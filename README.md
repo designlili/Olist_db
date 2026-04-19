@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://your-image-link.com/header.png" alt="Header" width="100%" />
+  <img src="images/header.png" alt="Olist E-Commerce Banner" width="100%" />
 </p>
 
 <h1 align="center">🛒 Olist E-Commerce Data Analysis</h1>
@@ -8,6 +8,7 @@
 PostgreSQL • SQL • Data Cleaning • Business Insights
 </p>
 
+🛒━━━━━━━━━━━━━━━━━━━━━━━━━━━━🛒
 🔥 **Highlight-Insights**
 
 - Umsatzentwicklung über Zeit analysierbar  
