@@ -1,4 +1,12 @@
-![Olist E-Commerce Banner](https://via.placeholder.com/1200x300.png?text=Olist+E-Commerce+Data+Analysis)
+<p align="center">
+  <img src="https://your-image-link.com/header.png" alt="Header" width="100%" />
+</p>
+
+<h1 align="center">🛒 Olist E-Commerce Data Analysis</h1>
+
+<p align="center">
+PostgreSQL • SQL • Data Cleaning • Business Insights
+</p>
 
 🔥 **Highlight-Insights**
 
