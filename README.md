@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/DEINNAME/REPO/main/header.png" width="100%" />
+<img src="header.png" alt="Olist Banner" width="50%" />
 
 # 🛒 Olist E-Commerce Data Analysis
 
