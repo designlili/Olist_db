@@ -1,4 +1,6 @@
-<img src="images/header.png" alt="Olist Banner" width="50%" />
+<img src="header.png" alt="Olist Banner" width="100%" />
+
+# 🛒 Olist E-Commerce Data Analysis
 
 <p align="center">
 PostgreSQL • SQL • Data Cleaning • Business Insights
