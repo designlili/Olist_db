@@ -7,6 +7,7 @@ PostgreSQL • SQL • Data Cleaning • Business Insights
 
 
 🛒━━━━━━━━━━━━━━━━━━━━━━━━━━━━🛒
+
 🔥 **Highlight-Insights**
 
 - Umsatzentwicklung über Zeit analysierbar  
