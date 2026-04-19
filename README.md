@@ -2,9 +2,9 @@
 
 # 🛒 Olist E-Commerce Data Analysis
 
-<p align="center">
+
 PostgreSQL • SQL • Data Cleaning • Business Insights
-</p>
+
 
 🛒━━━━━━━━━━━━━━━━━━━━━━━━━━━━🛒
 🔥 **Highlight-Insights**
