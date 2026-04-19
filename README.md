@@ -1,200 +1,129 @@
--- Create schema
+![Olist E-Commerce Banner](https://via.placeholder.com/1200x300.png?text=Olist+E-Commerce+Data+Analysis)
 
-CREATE SCHEMA IF NOT EXISTS olist;
+🛒 Olist E-Commerce Data Analysis
 
--- Customers
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+![SQL](https://img.shields.io/badge/SQL-Analysis-orange)
+![Data Cleaning](https://img.shields.io/badge/Data-Cleaning-green)
+![Analytics](https://img.shields.io/badge/Business-Analytics-purple)
 
-CREATE TABLE IF NOT EXISTS olist.customers (
-    customer_id VARCHAR(50) PRIMARY KEY,
-    customer_unique_id VARCHAR(50),
-    customer_zip_code_prefix INTEGER,
-    customer_city TEXT,
-    customer_state VARCHAR(2)
-);
+In diesem Projekt habe ich ein reales E-Commerce-Dataset in PostgreSQL verarbeitet und analysiert.
 
--- Geolocation
+Ich habe die Datenbank strukturiert aufgebaut, Daten bereinigt, Beziehungen modelliert und eine saubere Grundlage 
+für Analysen geschaffen. Der Fokus lag dabei auf Datenqualität, klarer Modellierung und praxisnahen Auswertungen.
 
-CREATE TABLE IF NOT EXISTS olist.geolocation (
-    geolocation_zip_code_prefix INTEGER,
-    geolocation_lat NUMERIC(10, 8),
-    geolocation_lng NUMERIC(11, 8),
-    geolocation_city TEXT,
-    geolocation_state VARCHAR(2)
-);
+Auf dieser Basis habe ich verschiedene Business-Analysen umgesetzt, darunter Umsatzentwicklungen, Kundenverhalten und Lieferzeiten.
 
--- Sellers
+Das Projekt zeigt meine Fähigkeiten in SQL, Datenaufbereitung und analytischem Denken anhand eines realistischen 
+E-Commerce Use Cases und bildet eine solide Grundlage für Reporting und Dashboarding.
 
-CREATE TABLE IF NOT EXISTS olist.sellers (
-    seller_id VARCHAR(50) PRIMARY KEY,
-    seller_zip_code_prefix INTEGER,
-    seller_city TEXT,
-    seller_state VARCHAR(2)
-);
+🎯 Projektziele
 
--- Products
+✨ Aufbau einer relationalen Datenbank
+🧹 Datenbereinigung und Standardisierung
+🔗 Verknüpfung der Tabellen mit Fremdschlüsseln
+📊 Erstellung von Analyse-Views
+📈 Entwicklung von Business-KPIs
+🌍 Verbesserung der Lesbarkeit durch deutsche Kategorien
 
-CREATE TABLE IF NOT EXISTS olist.products (
-    product_id VARCHAR(50) PRIMARY KEY,
-    product_category_name TEXT,
-    product_name_lenght INTEGER,
-    product_description_lenght INTEGER,
-    product_photos_qty INTEGER,
-    product_weight_g INTEGER,
-    product_length_cm INTEGER,
-    product_height_cm INTEGER,
-    product_width_cm INTEGER
-);
+🧱 Datenmodell
 
--- Category translation
+Die Datenbank umfasst folgende Kernbereiche:
 
-CREATE TABLE IF NOT EXISTS olist.category_translation (
-    product_category_name TEXT PRIMARY KEY,
-    product_category_name_english TEXT
-);
+👥 Customers – Kundendaten
+📦 Orders – Bestellungen
+🛍️ Order Items – einzelne Produkte pro Bestellung
+💳 Payments – Zahlungsinformationen
+⭐ Reviews – Kundenbewertungen
+🏪 Sellers – Verkäufer
+📦 Products – Produktdaten
+🌐 Category Translation – Übersetzungen (EN + DE)
 
--- Orders
+👉 Die geolocation-Tabelle wurde bewusst entfernt, um das Modell schlank und fokussiert zu halten.
 
-CREATE TABLE IF NOT EXISTS olist.orders (
-    order_id VARCHAR(50) PRIMARY KEY,
-    customer_id VARCHAR(50),
-    order_status TEXT,
-    order_purchase_timestamp TIMESTAMP,
-    order_approved_at TIMESTAMP,
-    order_delivered_carrier_date TIMESTAMP,
-    order_delivered_customer_date TIMESTAMP,
-    order_estimated_delivery_date TIMESTAMP
-);
+⚙️ Technologien
 
--- Order items
+🐘 PostgreSQL
+💻 SQL
+📂 CSV-Import (COPY)
+📊 Views & Window Functions
+🚀 Performance-Optimierung (Indizes)
 
-CREATE TABLE IF NOT EXISTS olist.order_items (
-    order_id VARCHAR(50),
-    order_item_id INTEGER,
-    product_id VARCHAR(50),
-    seller_id VARCHAR(50),
-    shipping_limit_date TIMESTAMP,
-    price NUMERIC(10, 2),
-    freight_value NUMERIC(10, 2),
-    PRIMARY KEY (order_id, order_item_id)
-);
+olist-postgresql-project/
+│
+├── README.md
+│
+├── sql/
+│   ├── 01_schema.sql
+│   ├── 02_tables.sql
+│   ├── 03_import.sql
+│   ├── 04_data_cleaning.sql
+│   ├── 05_data_quality_checks.sql
+│   ├── 06_constraints_indexes.sql
+│   ├── 07_views.sql
+│   ├── 08_analysis.sql
 
--- Payments
+🧹 Datenbereinigung
 
-CREATE TABLE IF NOT EXISTS olist.order_payments (
-    order_id VARCHAR(50),
-    payment_sequential INTEGER,
-    payment_type TEXT,
-    payment_installments INTEGER,
-    payment_value NUMERIC(10, 2),
-    PRIMARY KEY (order_id, payment_sequential)
-);
+Folgende Schritte wurden durchgeführt:
 
--- Reviews
+✔ Entfernen von Duplikaten
+✔ Standardisierung von Textfeldern
+✔ Bereinigung von Kategorienamen
+✔ Prüfung auf fehlende Verknüpfungen
+✔ Plausibilitätsprüfung von Zeitdaten
 
-CREATE TABLE IF NOT EXISTS olist.order_reviews (
-    review_id VARCHAR(50),
-    order_id VARCHAR(50),
-    review_score INTEGER,
-    review_comment_title TEXT,
-    review_comment_message TEXT,
-    review_creation_date TIMESTAMP,
-    review_answer_timestamp TIMESTAMP
-);
+📊 Beispielanalysen
 
--- CSV import (adjust paths!)
+Das Projekt enthält verschiedene praxisnahe SQL-Analysen:
 
-COPY olist.customers FROM 'PATH/olist_customers.csv' CSV HEADER;
-COPY olist.geolocation FROM 'PATH/olist_geolocation.csv' CSV HEADER;
-COPY olist.sellers FROM 'PATH/olist_sellers.csv' CSV HEADER;
-COPY olist.products FROM 'PATH/olist_products.csv' CSV HEADER;
-COPY olist.category_translation FROM 'PATH/category_translation.csv' CSV HEADER;
-COPY olist.orders FROM 'PATH/olist_orders.csv' CSV HEADER;
-COPY olist.order_items FROM 'PATH/olist_order_items.csv' CSV HEADER;
-COPY olist.order_payments FROM 'PATH/olist_order_payments.csv' CSV HEADER;
-COPY olist.order_reviews FROM 'PATH/olist_order_reviews.csv' CSV HEADER;
+📍 Top-Städte nach Bestellungen
+💰 Gesamtumsatz
+📅 Bestellungen pro Monat
+⭐ Durchschnittliche Bewertungen
+🚚 Lieferzeiten
+🛒 Warenkorbwert
+💳 Umsatz nach Zahlungsart
+🏆 Top-Seller
+🔁 Wiederkäufer-Analyse
+💎 Customer Lifetime Value (CLV)
 
--- Remove duplicate reviews
+🔥 Highlight-Insights
+Umsatzentwicklung über Zeit analysierbar
+Kundenverhalten klar segmentiert
+Schwache Produktkategorien identifiziert
+Verkäuferleistung vergleichbar gemacht
+💡 Besonderheiten
 
-DELETE FROM olist.order_reviews a
-USING olist.order_reviews b
-WHERE a.review_id = b.review_id
-AND a.ctid > b.ctid;
+🌍 Deutsche Übersetzungen für bessere Lesbarkeit
+🧠 Zentrale Analyse-View (v_bestellungen)
+⚡ Optimierte Performance durch Indizes
+📊 Struktur bereit für BI-Tools (Power BI / Tableau)
 
--- Standardize text
+🚀 Einsatzmöglichkeiten
 
-UPDATE olist.customers
-SET customer_city = INITCAP(TRIM(customer_city));
+Dieses Projekt eignet sich für:
 
-UPDATE olist.orders
-SET order_status = LOWER(TRIM(order_status));
+Data Analytics Portfolio
+SQL Showcase
+Business Intelligence Use Cases
+Vorbereitung auf Data Analyst Jobs
+📎 Datenquelle
 
-UPDATE olist.products
-SET product_category_name = LOWER(TRIM(product_category_name));
+Olist Brazilian E-Commerce Dataset (öffentlich verfügbar)
 
--- Missing orders
+✨ Fazit
 
-SELECT COUNT(*)
-FROM olist.order_items oi
-LEFT JOIN olist.orders o ON oi.order_id = o.order_id
-WHERE o.order_id IS NULL;
+Dieses Projekt zeigt, wie aus unstrukturierten Rohdaten eine saubere, analysierbare Datenbank entsteht.
+Durch strukturierte Modellierung, Datenbereinigung und gezielte Analysen lassen sich wertvolle Business-Insights gewinnen.
 
--- Invalid delivery dates
+👩‍💻 Autorin
 
-SELECT COUNT(*)
-FROM olist.orders
-WHERE order_delivered_customer_date < order_purchase_timestamp;
+Lili Kárándi
 
+⭐ Wenn dir das Projekt gefällt
 
--- Foreign keys
-
-ALTER TABLE olist.orders
-ADD CONSTRAINT fk_orders_customer
-FOREIGN KEY (customer_id)
-REFERENCES olist.customers(customer_id);
-
--- Indexes
-
-CREATE INDEX idx_orders_customer
-ON olist.orders(customer_id);
-
-CREATE INDEX idx_items_order
-ON olist.order_items(order_id);
-
-
--- Orders view (German)
-
-CREATE OR REPLACE VIEW olist.v_orders_deutsch AS
-SELECT
-    order_id,
-    CASE
-        WHEN order_status = 'delivered' THEN 'Zugestellt'
-        WHEN order_status = 'canceled' THEN 'Storniert'
-        ELSE order_status
-    END AS status
-FROM olist.orders;
-
-
--- Total revenue
-
-SELECT ROUND(SUM(price + freight_value), 2) AS revenue
-FROM olist.order_items;
-
--- Orders per month
-
-SELECT
-    DATE_TRUNC('month', order_purchase_timestamp) AS month,
-    COUNT(*) AS orders
-FROM olist.orders
-GROUP BY month
-ORDER BY month;
-
-
-
-
-
-
-
-
+Gerne ein ⭐ auf GitHub dalassen 😊
 
 
 
