@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./header.png" alt="Olist E-Commerce Banner" width="50%" />
-</p>
+<img src="images/header.png" alt="Olist Banner" width="50%" />
 
 <p align="center">
 PostgreSQL • SQL • Data Cleaning • Business Insights
